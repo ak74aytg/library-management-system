@@ -1,0 +1,205 @@
+@font-face {
+    font-family: rosmatica;
+    src: url('./RosmatikaRegular-BWA45.ttf');
+}
+body{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        rgb(68 96 223 / 70%),
+        rgb(26 19 36 / 70%)),
+    url('../background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.nav-link{
+    cursor: pointer;
+}
+.navbar-brand{
+    font-family: rosmatica !important;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.hidden{
+    display: none;
+}
+.navbar{
+    z-index: 44;
+}
+.cont{
+    background-color: rgba(0%, 0%, 0%, 60%);
+    /* backdrop-filter: blur(50px); */
+    border-radius: 10px;
+    padding: 5rem 2.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button{
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+width: 100%;
+margin: 8px 0;
+background-color: #4CAF50;
+color: white;
+padding: 12px 20px;
+border: none;
+cursor: pointer;
+}
+.card-header{
+    background-color: #1d1e1d;
+}
+.card-title, h6, .card-header{
+    color: #dffbff;
+}
+.navbar-brand{
+    padding-top: .8rem;
+    font-size: 28px;
+    color: #7cc4e5 !important;
+    font-weight: 800 !important;
+}
+.nav-link{
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.login{
+    background-color: rgba(0%, 0%, 0%, 100%);
+    height: 500px;
+    border-radius: 10px;
+    padding: 5rem 2.5rem;
+    transition: all 0.3s;
+    margin-top: 5rem !important;
+    position: relative;
+}
+.login:hover{
+    width: 28%;
+}
+.navbar{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between !important;
+}
+.row > .issue{
+    background-image: url('./return.jpg');
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.return{
+    background-image: url('./all.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.all{
+    background-image: url('./issue.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.book-info{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(81 140 209 / 60%);
+    /* backdrop-filter: blur(50px); */
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1.5rem 0.5rem;
+}
+
+.request_form {
+    padding: 25px 20px 33px 20px;
+    text-align: center;
+    background-color: #05415d;
+    margin-top: 15rem !important;
+    width: 100%;
+}
+.margin-btm-10 {
+    margin-bottom: 10px;
+}
+.form_group {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 22px;
+    position: relative;
+    width: 25% !important;
+}
+.form_group-1{
+    width: 75% !important;
+}
+.text-center{
+    text-align: center;
+}
+.form-inline{
+    display: inline-block;
+    width: 100%;
+    display: flex !important;
+}
+.form_control {
+    display: inline-block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    font-size: 13px;
+}
+
+.form_group .form_control {
+    min-height: 44px;
+    border-radius: 6px;
+}
+
+.card{
+    background-color: #05415d;
+    color: #f1abab;
+    border-radius: 10px;
+}
+/* .navbar-toggler{
+
+} */
+.navbar{
+    width: 100vw !important;
+    position: absolute;
+    left: 0;
+}

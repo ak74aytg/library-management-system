@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      h2 {
+        text-align: center;
+        color: white;
+      }
+      h4{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mb-5">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <p class="navbar-brand mt-1 h1">LIBRARY MANAGEMENT</p>
+          <button class="navbar-toggler bg-dark" style="width: 60px;" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>        
+          <div class="collapse navbar-collapse justify-content-between">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link hidden-p hidden log" data-page="#homepage">LOGIN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hidden-p hidden iss issue" data-page="#issue-form">ISSUE BOOK</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hidden-p hidden ret" data-page="#return-form">RETURN BOOK</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hidden-p hidden dir" data-page="#directory">DIRECTORY</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      <div id="homepage" class="container mt-5 justify-content-center">
+        <div class="row d-flex justify-content-center">
+          <h1 class="mt-5 mb-5">LIBRARY STUDENT LOGIN PAGE</h1>
+          <div class="cont col-12 col-md-4">
+            <form>
+              <label for="name">NAME</label>
+              <input type="text" id="username" placeholder="Name" />
+              <label for="name">PIN</label>
+              <input type="password" id="userpin" placeholder="Pin" />
+              <p class="hidden popup err">!!! invalid fields</p>
+              <button class="mt-5" type="submit" id="subm" value="SUBMIT" />SUBMIT
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="crud" class="container hidden justify-content-center mt-5 pt-5">
+        <div class="row d-flex justify-content-center">
+          <div
+            data-page="#issue-form"
+            id="issue-sel"
+            class="col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center issue"
+          >
+            <div class="book-info"><p>ISSUE A BOOK</p></div>
+          </div>
+          <div
+            data-page="#return-form"
+            id="return-sel"
+            class="col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center return"
+          >
+            <div class="book-info"><p>RETURN A BOOK</p></div>
+          </div>
+          <div
+            data-page="#directory"
+            id="directory-sel"
+            class="col-9 col-sm-6 m-3 col-md-3 login d-flex justify-content-center flex-column align-items-center all"
+          >
+            <div class="book-info"><p>YOUR BOOKS</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="issue-form" class="request_form hidden mt-5 pt-5 mb-5 justify-content-center">
+        <h3 class="form-header--title mb-5">ISSUE NEW BOOK</h3>
+        <div class="margin-btm-10"></div>
+        <div class="margin-btm-10"></div>
+        <div class="form-inline text-center" role="form">
+          <div class="form_group">
+            <input type="text" id="bookName" class="form_control" placeholder="book name" />
+          </div>
+          <div class="form_group">
+            <input type="number" id="bookID" class="form_control" placeholder="book ID" />
+          </div>
+          <div class="form_group">
+            <input type="number" id="issueDuration" class="form_control day" placeholder="Days" />
+          </div>
+          <p class="hidden popup err-issue">!!! invalid fields</p>
+          <div class="form_group">
+            <button type="submit" class="submit-book" value="submit" />SUBMIT
+          </div>
+        </div>
+      </div>
+
+      <div id="return-form" class="request_form hidden mt-5 pt-5 mb-5 justify-content-center">
+        <h3 class="form-header--title mb-5">RETURN THE BOOK</h3>
+        <div class="margin-btm-10"></div>
+        <div class="margin-btm-10"></div>
+        <div class="col-12 return-form">
+            <form onsubmit="return false" class="form-inline text-center" role="form">
+                <div class="form_group form_group-1">
+                  <input type="text" class="form_control" id="returnId" placeholder="Book ID" />
+                </div>
+                <p class="hidden popup err-return">Book not found</p>
+                <div class="form_group submit-return">
+                  <button type="submit" value="submit" />RETURN
+                </div>
+              </form>
+        </div>
+      </div>
+
+      <div id="directory" class="hidden container mt-5 pt-5">
+        <h1>YOUR BOOKS</h1>
+        <div class="row tble mt-5">
+            <!-- <div class="col-sm-4 mb-5">
+                <div class="card mb-3" style="max-width: 22rem">
+                    <div class="card-header h5">5434</div>
+                    <div class="card-body">
+                    <h4 class="card-title">One Life baby</h3>
+                    <h6>ISSUE DATE</h6>
+                    <p class="card-text">
+                        Sun Dec 18 2022 10:03:59 GMT+0530 (India Standard Time)
+                    </p>
+                    <h6>RETURN DATE</h6>
+                    <p class="card-text">
+                        Fri Dec 23 2022 10:03:59 GMT+0530 (India Standard Time)
+                    </p>
+                    <h6>FINE</h6>
+                    <p class="card-text">
+                        0
+                    </p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
