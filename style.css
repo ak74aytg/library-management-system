@@ -10,7 +10,7 @@ body{
     background-image: linear-gradient(
         rgb(68 96 223 / 70%),
         rgb(26 19 36 / 70%)),
-    url('./background.jpg');
+        url('./background.jpg');
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -76,6 +76,11 @@ cursor: pointer;
     font-size: 28px;
     color: #7cc4e5 !important;
     font-weight: 800 !important;
+}
+@media screen and (max-width: 500px) {
+    .navbar-brand{
+        font-size: 19px;
+    }
 }
 .nav-link{
     font-size: 18px !important;
