@@ -82,6 +82,11 @@ cursor: pointer;
         font-size: 19px;
     }
 }
+@media screen and (max-width: 360px) {
+    .navbar-brand{
+        font-size: 17px;
+    }
+}
 .nav-link{
     font-size: 18px !important;
     font-weight: 600 !important;
